@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ImportNow Assignment Explanation - Premsai</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+  @page {
+    size: A4;
+    margin: 18mm 18mm 18mm 18mm;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #18181b;
+    background: #ffffff;
+    line-height: 1.55;
+    font-size: 13.5px;
+  }
+
+  .header {
+    border-bottom: 2px solid #e3241b;
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .brand {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    color: #0a0a0a;
+  }
+  .brand span {
+    color: #e3241b;
+  }
+  .badge {
+    display: inline-block;
+    background: #fef2f2;
+    color: #e3241b;
+    border: 1px solid #fecaca;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .title {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #09090b;
+    margin: 8px 0 4px;
+  }
+  .meta {
+    font-size: 12px;
+    color: #71717a;
+    display: flex;
+    gap: 16px;
+  }
+  .meta b {
+    color: #27272a;
+  }
+
+  .box-links {
+    background: #fafafa;
+    border: 1px solid #e4e4e7;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+  }
+  .box-links h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #52525b;
+    margin-bottom: 8px;
+  }
+  .link-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .link-row:last-child { margin-bottom: 0; }
+  .link-row span.label {
+    font-weight: 600;
+    color: #27272a;
+    min-width: 140px;
+  }
+  .link-row a {
+    color: #e3241b;
+    text-decoration: none;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin: 20px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background: #e3241b;
+    border-radius: 2px;
+  }
+
+  p { margin-bottom: 10px; color: #3f3f46; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .card {
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #ffffff;
+  }
+  .card h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #09090b;
+    margin-bottom: 4px;
+  }
+  .card p {
+    font-size: 12px;
+    color: #52525b;
+    margin-bottom: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin: 12px 0 18px;
+  }
+  th, td {
+    padding: 8px 10px;
+    border: 1px solid #e4e4e7;
+    text-align: left;
+  }
+  th {
+    background: #f4f4f5;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: #18181b;
+  }
+  td code {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 11px;
+    color: #b91c1c;
+    background: #fef2f2;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+
+  ul, ol {
+    margin-left: 18px;
+    margin-bottom: 12px;
+    color: #3f3f46;
+  }
+  li {
+    margin-bottom: 5px;
+    font-size: 12.5px;
+  }
+
+  .highlight-quote {
+    background: #fafafa;
+    border-left: 3px solid #e3241b;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #52525b;
+    font-style: italic;
+    margin: 14px 0;
+  }
+
+  .footer-note {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #e4e4e7;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #a1a1aa;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="brand">IMPORT<span>NOW</span></div>
+      <span class="badge">Practical Screening Assignment</span>
+    </div>
+    <div class="title">Website Replication & AI Engineering Workflow Report</div>
+    <div class="meta">
+      <div>Role: <b>AI Executive</b></div>
+      <div>Candidate: <b>Premsai</b></div>
+      <div>Email: <b>maheshmannef4@gmail.com</b></div>
+      <div>Date: <b>November 2026</b></div>
+    </div>
+  </div>
+
+  <!-- PROJECT DELIVERABLES BOX -->
+  <div class="box-links">
+    <h3>Project Deliverables</h3>
+    <div class="link-row">
+      <span class="label">Live Website:</span>
+      <a href="https://premsai19.github.io/importnow-replica/">https://premsai19.github.io/importnow-replica/</a>
+    </div>
+    <div class="link-row">
+      <span class="label">GitHub Repository:</span>
+      <a href="https://github.com/Premsai19/importnow-replica">https://github.com/Premsai19/importnow-replica</a>
+    </div>
+    <div class="link-row">
+      <span class="label">Reference Website:</span>
+      <a href="https://importnow-concept.vercel.app/#home">https://importnow-concept.vercel.app/#home</a>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <h2>1. Project Overview & Executive Summary</h2>
+  <p>
+    This report documents the step-by-step methodology, architecture, and AI-assisted workflows used to replicate the <b>ImportNow</b> concept website. The goal was to build a 100% faithful, high-performance replica from scratch, encompassing all 11 landing page sections, custom 3D WebGL interactive simulations (interactive globe and ocean voyage), dynamic blog system, and responsive UI engine.
+  </p>
+  <p>
+    Rather than relying on heavy monolithic site-builders or bloated frameworks, the platform was engineered using clean modern standards (HTML5, modern CSS3, ES modules, and Three.js r160 via native Import Maps), ensuring 60fps animations, instant loading, and zero build toolchain overhead.
+  </p>
+
+  <!-- AI WORKFLOW -->
+  <h2>2. AI Tools & Development Workflow</h2>
+  <p>
+    As an aspiring AI Executive, I leveraged state-of-the-art agentic AI tools to automate complex engineering stages, from visual reverse-engineering to shader mathematics and rapid debugging:
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Phase 1: Autonomous Visual & DOM Inspection</h4>
+      <p>Deployed autonomous browser agents with Playwright to inspect the reference site across desktop (1440&times;900) and mobile breakpoints, mapping out typography tokens (<code>Sora</code> & <code>Inter</code>), color tokens (<code>#e3241b</code> crimson, <code>#0a0a0a</code> deep ink), and CSS layout systems.</p>
+    </div>
+    <div class="card">
+      <h4>Phase 2: 3D WebGL & Shader Reconstruction</h4>
+      <p>Reconstructed Three.js r160 geometry and custom GLSL shaders for the interactive globe and 700vh scroll-driven ocean voyage, solving complex camera spline interpolation, wave displacement, and ACESFilmic tone mapping.</p>
+    </div>
+    <div class="card">
+      <h4>Phase 3: Component Engineering & In-Memory CMS</h4>
+      <p>Implemented modular client-side engines: dynamic SVG sprite injection, mouse-tracking 3D card tilt with radial glare, count-up animations, and a relational article database with instant live search and category filtering.</p>
+    </div>
+    <div class="card">
+      <h4>Phase 4: Version Control & Automated Deployment</h4>
+      <p>Organized the codebase into a clean Git repository, pushed to GitHub under <code>Premsai19/importnow-replica</code>, and configured automatic deployment to GitHub Pages for instant live evaluation.</p>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- TECHNICAL ARCHITECTURE -->
+  <h2>3. Technical Architecture & File Breakdown</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">File / Path</th>
+        <th style="width: 18%;">Technology</th>
+        <th>Purpose & Key Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>index.html</code></td>
+        <td>HTML5 Semantic</td>
+        <td>Complete 11-section landing page: Hero, Services, 3D Voyage, Products, Shanghai office, Trips, Work, Stories, FAQ, and Contact.</td>
+      </tr>
+      <tr>
+        <td><code>blog.html</code></td>
+        <td>HTML5 / Vanilla JS</td>
+        <td>Knowledge Hub directory with instant client search, 8 category filter tabs, and 6-article pagination.</td>
+      </tr>
+      <tr>
+        <td><code>post.html</code></td>
+        <td>HTML5 / Vanilla JS</td>
+        <td>Dynamic article reader: automated Table of Contents (TOC), reading time estimation, author badge, and social share links.</td>
+      </tr>
+      <tr>
+        <td><code>assets/site.css</code></td>
+        <td>CSS3 (Custom Props)</td>
+        <td>Design system tokens, responsive breakpoints, card spotlights (<code>--mx</code>, <code>--my</code>), 3D perspective, and clip-path wipes.</td>
+      </tr>
+      <tr>
+        <td><code>assets/site.js</code></td>
+        <td>JavaScript ES6+</td>
+        <td>Header/footer construction, SVG sprite definitions, scroll progress bar, count-up animation, and direct WhatsApp RFQ generator.</td>
+      </tr>
+      <tr>
+        <td><code>assets/globe.js</code></td>
+        <td>Three.js r160 WebGL</td>
+        <td>Interactive 3D Earth, quadratic Bezier shipping curves (China &rarr; India), pulsating glow particles, and unprojected 2D screen pins.</td>
+      </tr>
+      <tr>
+        <td><code>assets/voyage.js</code></td>
+        <td>Three.js / Water / Sky</td>
+        <td>700vh scroll-driven ocean voyage: procedural container ship with "IMPORTNOW" livery, working STS cranes, and 6-milestone tracker.</td>
+      </tr>
+      <tr>
+        <td><code>assets/posts.js</code></td>
+        <td>JavaScript Array</td>
+        <td>Client-side relational database containing 8 comprehensive import guides with formatted HTML bodies, slugs, and read times.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CORE HIGHLIGHTS -->
+  <h2>4. Key Interactive & 3D Engineering Highlights</h2>
+  <ul>
+    <li><b>Interactive 3D Trade Route Globe (<code>assets/globe.js</code>)</b>: Renders a high-fidelity Earth with custom atmospheric rim glow and ACESFilmic tone mapping. Shipping routes connecting Chinese manufacturing hubs (Shanghai, Yiwu, Guangzhou) to Indian ports (Nhava Sheva, Chennai, Hyderabad) are computed using 3D Bezier splines. 3D coordinates are dynamically unprojected onto 2D screen space to render responsive HTML pin badges with country flags.</li>
+    <li><b>Scroll-Driven Ocean Voyage (<code>assets/voyage.js</code>)</b>: Spanning a 700vh scroll container with sticky viewport positioning, the scene features procedural ocean waves (Three.js Water shader), a physical sky dome with Rayleigh/Mie scattering, a detailed container cargo vessel, rotating radar, and working harbor gantry cranes with trolleys and spreader cables that animate based on page scroll position.</li>
+    <li><b>Interactive Chinese Business License Plaque (<code>#shanghai</code>)</b>: A 3D perspective rotated Chinese business license plaque for <i>Shanghai Shengqiao Chain Trading Co., Ltd.</i>, featuring authentic Songti typography, national emblem radial gradient, official seal stamp, and interactive mouse-tilt parallax.</li>
+    <li><b>Instant WhatsApp RFQ Integration</b>: The quote inquiry form validates user inputs (Category, Quantity, Budget, and Specs) and directly compiles and URL-encodes a pre-filled WhatsApp message sent to <code>+91 99897 24320</code>.</li>
+  </ul>
+
+  <!-- FRESHER PERSPECTIVE -->
+  <h2>5. Fresher Perspective & Problem Solving</h2>
+  <div class="highlight-quote">
+    "As an entry-level candidate, this challenge was a tremendous opportunity to demonstrate not just knowledge of AI tools, but the critical ability to orchestrate them, understand the underlying code, debug WebGL/CSS edge-cases, and deliver a production-grade product within the deadline."
+  </div>
+  <ul>
+    <li><b>Fast Learning Agility</b>: Rapidly grasped Three.js WebGL concepts (mesh instancing, buffer geometries, PMREM environment generation) and adapted them without relying on pre-packaged templates.</li>
+    <li><b>Debugging & Problem Solving</b>: Identified and resolved browser viewport scaling issues, handled ES module Import Maps without bundling tools, and ensured responsive layout integrity across mobile, tablet, and widescreen monitors.</li>
+    <li><b>Production Readiness</b>: Delivered clean, formatted, and thoroughly tested code hosted live and tracked under Git version control.</li>
+  </ul>
+
+  <div class="footer-note">
+    <span>ImportNow AI Executive Screening Assignment</span>
+    <span>Candidate: Premsai &bull; maheshmannef4@gmail.com</span>
+  </div>
+
+</body>
+</html>
